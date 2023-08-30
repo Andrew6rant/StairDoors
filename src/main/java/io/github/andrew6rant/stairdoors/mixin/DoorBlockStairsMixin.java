@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(DoorBlock.class)
-public class DoorBlockMixin {
+public class DoorBlockStairsMixin {
     // Massive thanks to Setadokalo for the code this mixin is modified from
     // https://gitlab.com/Setadokalo/stairdoors-fabric/-/blob/master/src/main/java/com/setadokalo/stairdoors/mixin/DoorsMixin.java
     @Inject(cancellable = true, method = "canPlaceAt(Lnet/minecraft/block/BlockState;Lnet/minecraft/world/WorldView;Lnet/minecraft/util/math/BlockPos;)Z", at = @At("HEAD"))
@@ -27,5 +27,4 @@ public class DoorBlockMixin {
                 cir.setReturnValue(true);
         }
     }
-
 }
