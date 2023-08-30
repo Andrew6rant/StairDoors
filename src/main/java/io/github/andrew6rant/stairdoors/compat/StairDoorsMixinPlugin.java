@@ -20,7 +20,10 @@ public class StairDoorsMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        return !(FabricLoader.getInstance().isModLoaded("autoslabs") && mixinClassName.equals("io.github.andrew6rant.stairdoors.mixin.SlabMixin"));
+        if (mixinClassName.equals("io.github.andrew6rant.stairdoors.mixin.DoorBlockSlabBlockMixin")) {
+            return FabricLoader.getInstance().isModLoaded("autoslabs");
+        }
+        return true;
     }
 
     @Override
