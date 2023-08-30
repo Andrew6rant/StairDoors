@@ -9,8 +9,7 @@
 		"Setadokalo (original author)"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/Andrew6rant/StairDoors"
 	},
 	"license": "MIT",
 	"icon": "assets/stairdoors/icon.png",
