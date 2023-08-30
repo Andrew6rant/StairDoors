@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "stairdoors",
+	"version": "${version}",
+	"name": "StairDoors Extended",
+	"description": "Place doors on additional blocks, such as stairs and vertical slabs",
+	"authors": [
+		"Andrew6rant (Andrew Grant)",
+		"Setadokalo (original author)"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/stairdoors/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "io.github.andrew6rant.stairdoors.StairDoors"
+		]
+	},
+	"mixins": [
+		"stairdoors.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
