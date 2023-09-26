@@ -23,9 +23,9 @@
 		"stairdoors.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.14.22",
-		"java": ">=17",
-		"fabric-api": "*"
+		"fabricloader": "*",
+		"java": ">=8",
+		"fabric": "*"
 	},
 	"suggests": {
 		"another-mod": "*"

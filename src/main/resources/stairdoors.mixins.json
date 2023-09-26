@@ -4,8 +4,8 @@
   "plugin": "io.github.andrew6rant.stairdoors.compat.StairDoorsMixinPlugin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "DoorBlockStairsMixin",
-    "DoorBlockSlabBlockMixin"
+    "DoorBlockSlabBlockMixin",
+    "DoorBlockStairsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

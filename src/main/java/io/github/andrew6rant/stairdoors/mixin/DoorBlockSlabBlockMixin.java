@@ -22,25 +22,30 @@ public class DoorBlockSlabBlockMixin {
         BlockState slabState = world.getBlockState(pos.down());
         if (slabState.getBlock() instanceof SlabBlock) {
             switch (state.get(DoorBlock.FACING)) {
-                case NORTH -> {
+                // I cannot use switch rules because I am maintaining compatibility with Java 8
+                case NORTH: {
                     if (slabState.get(VERTICAL_TYPE) == VerticalType.NORTH_SOUTH && slabState.get(TYPE) == SlabType.BOTTOM) {
                         cir.setReturnValue(true);
                     }
+                    break;
                 }
-                case SOUTH -> {
+                case SOUTH: {
                     if (slabState.get(VERTICAL_TYPE) == VerticalType.NORTH_SOUTH && slabState.get(TYPE) == SlabType.TOP) {
                         cir.setReturnValue(true);
                     }
+                    break;
                 }
-                case EAST -> {
+                case EAST: {
                     if (slabState.get(VERTICAL_TYPE) == VerticalType.EAST_WEST && slabState.get(TYPE) == SlabType.BOTTOM) {
                         cir.setReturnValue(true);
                     }
+                    break;
                 }
-                case WEST -> {
+                case WEST: {
                     if (slabState.get(VERTICAL_TYPE) == VerticalType.EAST_WEST && slabState.get(TYPE) == SlabType.TOP) {
                         cir.setReturnValue(true);
                     }
+                    break;
                 }
             }
         }
